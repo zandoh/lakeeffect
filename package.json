@@ -1,0 +1,35 @@
+{
+  "name": "lakeeffect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "serve": "next build && next export && cd out && serve -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zandoh/lakeeffect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zandoh/lakeeffect/issues"
+  },
+  "homepage": "https://github.com/zandoh/lakeeffect#readme",
+  "dependencies": {
+    "next": "^9.3.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "@types/react": "^16.9.27",
+    "serve": "^11.3.0",
+    "typescript": "^3.8.3"
+  }
+}
