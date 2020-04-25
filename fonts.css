@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "BalooBold";
+  src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-Bold.ttf");
+}
+
+@font-face {
+  font-family: "BalooExtraBold";
+  src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "BalooMedium";
+  src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-Medium.ttf");
+}
+
+@font-face {
+  font-family: "BalooRegular";
+  src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BalooSemiBold";
+  src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-SemiBold.ttf");
+}
