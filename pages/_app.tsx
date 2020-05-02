@@ -5,7 +5,6 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { brand, Brand } from "../theme";
 import "../fonts.css";
 import * as resetCSS from "reset-css";
-import Header from "../components/Header/Header";
 
 export interface ITheme {
   brand: Brand;
@@ -44,7 +43,6 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Header />
           <Component {...pageProps} />
         </ThemeProvider>
       </Fragment>
