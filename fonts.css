@@ -22,3 +22,8 @@
   font-family: "BalooSemiBold";
   src: url("./assets/fonts/Baloo_Thambi_2/BalooThambi2-SemiBold.ttf");
 }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("./assets/fonts/Montserrat/Montserrat-Light.ttf");
+}

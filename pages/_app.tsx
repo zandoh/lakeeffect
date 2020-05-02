@@ -5,6 +5,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { brand, Brand } from "../theme";
 import "../fonts.css";
 import * as resetCSS from "reset-css";
+import Header from "../components/Header/Header";
 
 export interface ITheme {
   brand: Brand;
@@ -20,19 +21,6 @@ export const theme: ITheme = {
 
 const GlobalStyle = createGlobalStyle<IThemeWrapper>`
   ${resetCSS}
-  body {
-    background: ${(props) => props.theme.brand.colors.lightBlue};
-    background: -webkit-linear-gradient(to right, ${(props) =>
-      props.theme.brand.colors.lightBlue}, ${(props) =>
-  props.theme.brand.colors.darkBlue});
-    background: linear-gradient(to right, ${(props) =>
-      props.theme.brand.colors.lightBlue}, ${(props) =>
-  props.theme.brand.colors.darkBlue});
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-  }
   
   #__next {
     display: flex;
@@ -40,6 +28,7 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
     margin: 0;
     height: 100vh;
     width: 100vw;
+    flex-direction: column;
   }
 `;
 
@@ -55,6 +44,7 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+          <Header />
           <Component {...pageProps} />
         </ThemeProvider>
       </Fragment>

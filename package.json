@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/zandoh/lakeeffect#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/pro-light-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "next": "^9.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

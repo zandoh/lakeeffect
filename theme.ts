@@ -3,6 +3,7 @@ export const brand = {
     darkBlue: "#0044ab",
     lightBlue: "#0094ef",
     white: "#FFF",
+    black: "#0A0C11",
   },
   fonts: {
     baloo: {
@@ -13,6 +14,7 @@ export const brand = {
       semiBold: "BalooSemiBold",
     },
   },
+  headerHeight: "125px",
 };
 
 export type Brand = typeof brand;
