@@ -14,7 +14,7 @@ const Header = () => {
           <Link href={PATHS.INFO}>
             <StyledListItem>About</StyledListItem>
           </Link>
-          <Link href={PATHS.APPLY}>
+          {/* <Link href={PATHS.APPLY}>
             <StyledListItem>Apply</StyledListItem>
           </Link>
           <Link href={PATHS.PROGRESS}>
@@ -22,7 +22,7 @@ const Header = () => {
           </Link>
           <Link href={PATHS.RECRUITMENT}>
             <StyledListItem>Recruitment</StyledListItem>
-          </Link>
+          </Link> */}
         </StyledList>
       </StyledNav>
     </StyledHeader>

@@ -12,32 +12,40 @@ const client = createClient({
 
 const types = ["blogData", "siteData", "streamData"];
 
-export const getcontent = async () => {
-  console.log("> Starting import...");
+export const getContent = async () => {
+  let currentType = "";
+  console.log(`> Starting content import for space (${SPACE})`);
 
-  for (const type of types) {
-    console.log("> Getting content for", type);
+  try {
+    for (const type of types) {
+      currentType = type;
+      console.log(`> Attempting to get content for type (${currentType})`);
 
-    const entries = await client.getEntries({
-      content_type: type,
-      include: 3,
-    });
+      const entries = await client.getEntries({
+        content_type: currentType,
+      });
 
-    if (entries.total === 1) {
-      const { fields } = entries.items[0];
+      if (entries.total === 1) {
+        const { fields } = entries.items[0];
+        const file = path.join(__dirname, "..", "data", `${currentType}.json`);
+        fs.writeFileSync(file, JSON.stringify(fields));
 
-      fs.writeFileSync(
-        path.join(__dirname, "..", "data", `${type}.json`),
-        JSON.stringify(fields)
-      );
-
-      console.log("> Content gotten and written for", type);
+        console.log(
+          `> Successfully obtained content for type (${currentType}). Wrote to file (${file})`
+        );
+      }
     }
+  } catch (e) {
+    console.error(
+      `> ERROR: Failed to get data from contentful for type (${currentType})`
+    );
+    console.error(e);
+    process.exit(1);
   }
 
-  return true;
+  return Promise.resolve();
 };
 
 if (process.argv[2] === "install") {
-  getcontent();
+  getContent();
 }

@@ -7,10 +7,10 @@ module.exports = {
     return {
       [`${PATHS.ROOT}`]: { page: `${PATHS.ROOT}` },
       [`${PATHS.INFO}`]: { page: `${PATHS.INFO}` },
-      [`${PATHS.APPLY}`]: { page: `${PATHS.APPLY}` },
-      [`${PATHS.PROGRESS}`]: { page: `${PATHS.PROGRESS}` },
-      [`${PATHS.RECRUITMENT}`]: { page: `${PATHS.RECRUITMENT}` },
-      [`${PATHS.NEEDS}`]: { page: `${PATHS.RECRUITMENT}` },
+      // [`${PATHS.APPLY}`]: { page: `${PATHS.APPLY}` },
+      // [`${PATHS.PROGRESS}`]: { page: `${PATHS.PROGRESS}` },
+      // [`${PATHS.RECRUITMENT}`]: { page: `${PATHS.RECRUITMENT}` },
+      // [`${PATHS.NEEDS}`]: { page: `${PATHS.RECRUITMENT}` },
     };
   },
 };
