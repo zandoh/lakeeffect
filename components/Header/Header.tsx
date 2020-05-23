@@ -36,16 +36,14 @@ const StyledImg = styled.img`
 `;
 
 const StyledHeader = styled.header`
-  width: 100vw;
   height: ${(props) => props.theme.brand.headerHeight};
-  z-index: 10;
 `;
 
 const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding: 25px 0px;
 `;
 
 const StyledList = styled.ul`

@@ -5,38 +5,44 @@ import Link from "next/link";
 import { PATHS } from "../const";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/pro-light-svg-icons";
+import { StyledPageContainer } from "./_app";
 
 const Home: NextPage = () => {
   return (
     <React.Fragment>
       <StyledHomeHeader>
-        <StyledSpan>US - Alliance - Kel'Thuzad</StyledSpan>
-        <StyledH1>Lake Effect</StyledH1>
-        <Link href={PATHS.INFO}>
-          <React.Fragment>
-            <StyledAnchor>
-              Learn More <StyledFontAwesomeIcon icon={faArrowRight} />
-            </StyledAnchor>
-          </React.Fragment>
-        </Link>
+        <StyledPageContainer>
+          <StyledSpan>US - Alliance - Kel'Thuzad</StyledSpan>
+          <StyledH1>Lake Effect</StyledH1>
+          <Link href={PATHS.INFO}>
+            <React.Fragment>
+              <StyledAnchor>
+                Learn More <StyledFontAwesomeIcon icon={faArrowRight} />
+              </StyledAnchor>
+            </React.Fragment>
+          </Link>
+        </StyledPageContainer>
       </StyledHomeHeader>
       <StyledHomeNews>
-        <StyledNewsTitle>
-          <StyledH2>News Feed</StyledH2>
-        </StyledNewsTitle>
+        <StyledPageContainer>
+          <StyledNewsTitle>
+            <StyledH2>News Feed</StyledH2>
+          </StyledNewsTitle>
+        </StyledPageContainer>
       </StyledHomeNews>
     </React.Fragment>
   );
 };
 
 const StyledHomeHeader = styled.section`
-  height: 660px;
+  height: 988px;
   background: linear-gradient(rgba(0, 68, 171, 0.25), rgba(0, 68, 171, 0.25)),
     url("/shadowlands.jpg") no-repeat;
   background-size: cover;
   margin-top: -${(props) => props.theme.brand.headerHeight};
   padding-top: ${(props) => props.theme.brand.headerHeight};
   padding: 250px 120px 0 120px;
+  z-index: -1;
 `;
 
 const StyledSpan = styled.span`

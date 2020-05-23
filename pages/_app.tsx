@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import App from "next/app";
 import Head from "next/head";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { brand, Brand } from "../theme";
 import "../fonts.css";
 import * as resetCSS from "reset-css";
@@ -44,10 +44,17 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Header />
+          <StyledPageContainer>
+            <Header />
+          </StyledPageContainer>
           <Component {...pageProps} />
         </ThemeProvider>
       </Fragment>
     );
   }
 }
+
+export const StyledPageContainer = styled.div`
+  margin: 0 auto;
+  width: 1200px;
+`;

@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["@babel/env", "next/babel"],
   "plugins": [
     [
       "styled-components",
@@ -7,6 +7,12 @@
         "ssr": true,
         "displayName": true,
         "preprocess": false
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
       }
     ]
   ]
