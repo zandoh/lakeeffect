@@ -1,7 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 import Link from "next/link";
 import { PATHS } from "../../const";
+import {
+  StyledHeader,
+  StyledNav,
+  StyledImg,
+  StyledList,
+  StyledListItem,
+} from "./styles";
 
 const Header = () => {
   return (
@@ -28,41 +34,5 @@ const Header = () => {
     </StyledHeader>
   );
 };
-
-const StyledImg = styled.img`
-  :hover {
-    cursor: pointer;
-  }
-`;
-
-const StyledHeader = styled.header`
-  height: ${(props) => props.theme.brand.headerHeight};
-`;
-
-const StyledNav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 0px;
-`;
-
-const StyledList = styled.ul`
-  display: flex;
-
-  > * {
-    margin-right: 40px;
-  }
-`;
-
-const StyledListItem = styled.li`
-  color: ${(props) => props.theme.brand.colors.white};
-  font: 400 0.875em/18px Montserrat, sans-serif;
-  transition: color 0.3s ease-in-out;
-
-  :hover {
-    color: ${(props) => props.theme.brand.colors.lightBlue};
-    cursor: pointer;
-  }
-`;
 
 export default Header;

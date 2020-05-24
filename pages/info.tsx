@@ -1,10 +1,11 @@
 import { NextPage } from "next";
+import SubPageWrapper from "../components/SubPageWrapper/SubPageWrapper";
 
 const Info: NextPage = () => {
   return (
-    <div>
+    <SubPageWrapper>
       <p>Info</p>
-    </div>
+    </SubPageWrapper>
   );
 };
 

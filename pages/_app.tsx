@@ -6,6 +6,7 @@ import { brand, Brand } from "../theme";
 import "../fonts.css";
 import * as resetCSS from "reset-css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 export interface ITheme {
   brand: Brand;
@@ -29,6 +30,7 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
     height: 100vh;
     width: 100vw;
     flex-direction: column;
+    overflow-x: hidden;
   }
 `;
 
@@ -48,6 +50,7 @@ export default class MyApp extends App {
             <Header />
           </StyledPageContainer>
           <Component {...pageProps} />
+          <Footer />
         </ThemeProvider>
       </Fragment>
     );
@@ -56,5 +59,6 @@ export default class MyApp extends App {
 
 export const StyledPageContainer = styled.div`
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 `;
