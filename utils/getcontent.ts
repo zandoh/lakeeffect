@@ -17,6 +17,12 @@ export const getContent = async () => {
   console.log(`> Starting content import for space (${SPACE})`);
 
   try {
+    const dataDir = "./data";
+
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir);
+    }
+
     for (const type of types) {
       currentType = type;
       console.log(`> Attempting to get content for type (${currentType})`);
