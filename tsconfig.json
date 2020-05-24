@@ -15,11 +15,5 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "const.js",
-    "utils/getcontent.ss"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "const.js"]
 }
