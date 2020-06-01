@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
     "build": "npm run contentful-typescript-codegen && next build",
-    "start": "next start",
-    "export": "next export",
-    "serve": "npm run build && next export && cd out && serve -p 8080",
-    "postinstall": "npm run getContent",
-    "getContent": "babel-node --extensions \".ts\" utils/getContent.ts install",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output ./contentful.d.ts",
     "deploy": "npm run postinstall && npm run build && next export",
-    "contentful-typescript-codegen": "contentful-typescript-codegen --output ./contentful.d.ts"
+    "dev": "npm run setupEnv && next",
+    "export": "next export",
+    "getContent": "babel-node --extensions \".ts\" utils/getContent.ts install",
+    "postinstall": "npm run getContent",
+    "serve": "npm run build && next export && cd out && serve -p 8080",
+    "setupEnv": "export $(cat .env | xargs)",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
