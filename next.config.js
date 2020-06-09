@@ -6,6 +6,7 @@ module.exports = {
   exportPathMap: function () {
     return {
       [`${PATHS.ROOT}`]: { page: `${PATHS.ROOT}` },
+      [`${PATHS.APPLY}`]: { page: `${PATHS.APPLY}` },
     };
   },
 };
